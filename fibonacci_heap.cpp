@@ -259,10 +259,10 @@ void cut(Node* x) {
         x->parent->marked = 1; 
     }
     else { // already marked, perform cascading cut 
-        cut(x->parent);
-        x->marked = 0; 
+        cut(x->parent); 
     }
-    
+
+    x->marked = 0;
     x->parent = nullptr; // x is in root list so there is no parent 
 }
 
